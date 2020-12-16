@@ -26,7 +26,7 @@ class CaptureRequest extends AbstractRequest
         $data = ['success' => false];
 
         $parameters = [
-            'amount' => $this->getAmount() * 100,
+            'amount' => (int)round($this->getAmount() * 100), // api requires int
         ];
 
         //optionals
